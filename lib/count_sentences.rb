@@ -8,6 +8,7 @@ class String
   end
 
   def question?
+    self.end_with? ("?")
     
 
   end
@@ -18,7 +19,7 @@ class String
   end
 
   def count_sentences
-    
+    self.split(/[.!?]/).reject {|string| string.empty?}.size 
 
   end
 end
